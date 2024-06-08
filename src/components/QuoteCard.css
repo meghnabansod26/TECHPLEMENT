@@ -1,0 +1,44 @@
+/* Ensure box-sizing is set to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.quote-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 40px auto;  /* Center the card horizontally */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 900px; /* Set maximum width */
+  width: 100%;      /* Set width to 100% to make it responsive */
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.quote-content {
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 15px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    padding: 10px;
+    margin: 10px auto;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
+  .quote-content {
+    text-align: center; /* Center text on smaller screens for better readability */
+  }
+}
